@@ -32,7 +32,11 @@ const loadIcons = () => {
       );
     }
 
-    listItem.appendChild(listItemIcon);
+    const listItemName = document.createElement('div');
+    listItemName.textContent = iconClass;
+    listItemName.classList.add('list-item__name');
+
+    listItem.append(listItemIcon, listItemName);
 
     listItemContainer.appendChild(listItem);
 
