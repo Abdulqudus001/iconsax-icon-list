@@ -8,15 +8,20 @@ const currentIcon = iconsaxIcons.slice(start, end);
 const fragment = document.createDocumentFragment();
 
 currentIcon.forEach((icon) => {
-  const listItem = document.createElement('li');
-  listItem.classList.add('list-item');
+  const listItemContainer = document.createElement('li');
+  listItemContainer.classList.add('col-6', 'col-md-3', 'col-lg-2');
+
+  const listItem = document.createElement('div');
+  listItem.classList.add('list-item', 'my-3');
 
   const listItemIcon = document.createElement('i');
   listItemIcon.classList.add('list-item__icon', 'isax', `isax-${icon}`);
 
   listItem.appendChild(listItemIcon);
 
-  fragment.appendChild(listItem);
+  listItemContainer.appendChild(listItem);
+
+  fragment.appendChild(listItemContainer);
 });
 
 list.appendChild(fragment);

@@ -1,4 +1,24 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #f3f1f1;
+}
+
+.icon-list {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.list-item {
+  background-color: #fff;
+  text-align: center;
+  min-height: 150px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-item__icon {
+  font-size: 50px;
 }
